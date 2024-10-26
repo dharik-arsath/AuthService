@@ -17,11 +17,12 @@
 
 #     user: Mapped["UserModel"] = relationship("UserModel", backref=None)
 
-from sqlmodel import Field, SQLModel
 from typing import Optional
+
+from sqlmodel import Field, SQLModel
 
 
 class AuthModel(SQLModel, table=True):
     id: Optional[int] = Field(default=None, primary_key=True)
-    user_id: int
+    user_id: str = Field(unique=True, index=True)
     password: str

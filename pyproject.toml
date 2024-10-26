@@ -1,0 +1,36 @@
+[tool.poetry]
+name = "auth"
+version = "0.1.0"
+description = ""
+authors = ["Dharik Arsath"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiohttp = "^3.10.9"
+aiomysql = "^0.2.0"
+bcrypt = "^4.2.0"
+cryptography = "^43.0.1"
+fastapi = "^0.115.0"
+loguru = "^0.7.2"
+mypy = "^1.11.2"
+pydantic = {extras = ["email"], version = "^2.9.2"}
+pyjwt = "^2.9.0"
+ruff = "^0.6.9"
+sqlalchemy = "^2.0.35"
+sqlmodel = "^0.0.22"
+uvicorn = "^0.31.0"
+watchfiles = "^0.24.0"
+redis = "^5.1.1"
+types-redis = "^4.6.0.20241004"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[mypy]
+strict = true
+disallow_any_expr = true  # Disallow Any type expressions
+incremental=true

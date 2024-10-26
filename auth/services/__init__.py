@@ -1,3 +1,5 @@
-from .simple_password_auth_service import SimplePasswordAuthService
+from .oauth_password_auth_service import OAuthPasswordAuthService
 
-__all__ = ["SimplePasswordAuthService"]
+# from .merchant_oauth_service import MerchantOAuthPasswordAuthService
+
+__all__ = ["OAuthPasswordAuthService"]
